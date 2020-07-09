@@ -1,0 +1,89 @@
+* {
+    margin: auto;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+}
+
+.circle {
+    height: 45vh;
+    width: 23vw;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.circle p {
+    font-size: 300%;
+}
+
+.navBar {
+    background-color: cyan;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    padding: 1%;
+    z-index: 9999;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: crimson;
+}
+
+.navBar a:hover {
+    opacity: 0.8;
+}
+
+.content {
+    background-color: aquamarine;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 20vh;
+    left: 25%;
+    padding: 1%;
+    width: 50%;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: auto;
+    overflow: auto;
+}
+
+.home-footer {
+    background-color: cyan;
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+}
+
+.home-footer a {
+    text-decoration: none;
+}
+
+.footer {
+    background-color: cyan;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+}
+
+.footer a {
+    text-decoration: none;
+}
