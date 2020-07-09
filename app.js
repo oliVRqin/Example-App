@@ -1,7 +1,7 @@
 function showTime() {
     const date = new Date();
 
-    const hour = (date.getHours() > 12) ? date.getHours() - 12 : date.getHours();
+    const hour = (date.getHours() % 12) || 12;
     const minute = date.getMinutes();
     const minute_adj = (minute < 10) ? `0${minute}` : minute;
     const second = date.getSeconds();
