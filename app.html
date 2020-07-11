@@ -13,13 +13,31 @@
         <div class="content">
             <p>This will be a watch app. Time, stopwatch, timer.</p>
             <br><hr><br>
-            <span class="circle"><p id="demo"></p></span>
+            <span class="circle">
+                <p id="show">Time</p>
+            </span>
             <br>
-            <button type="button" onclick="startTime()">Start</button>
-            <button type="button" onclick="stopTime()">Stop</button>
+            <button type="button" onclick="showTime()">Watch</button>
+            <br><br>
+            <hr><br>
+            <span class="circle">
+                <p id="stopwatch">Stop Watch</p>
+            </span>
+            <br>
+            <!--<button type="button" onclick="stopwatch()">Stopwatch</button>-->
+            <input type="button" id="b1" onclick="stopwatch()" value="Stopwatch" /> 
+            <input type="hidden" id="b2" onclick="startTime()" value="Start" /> 
+            <input type="hidden" id="b3" onclick="stopTime()" value="Stop" />
+            <input type="hidden" id="b4" onclick="resetTime()" value="Reset" />
+            <br><br>
+            <hr><br>
+            <span class="circle">
+                <p id="timer">Timer</p>
+            </span>
+            <br>
             <button type="button" onclick="timer()">Timer</button>
         </div>
-        <div class="footer">
+        <div class="home-footer">
             <p>&copy; Oliver Qin 2020 | <a href="">Privacy Policy</a></p>
         </div>
         <script src="app.js"></script>
