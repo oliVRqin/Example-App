@@ -5,40 +5,42 @@
         <title>Watch App</title>
     </head>
     <body>
-        <div class="navBar">
-            <a href="https://www.oliverqin.com/" style="color: black">Oliver Qin</a>
-            <a href="http://127.0.0.1:5500/Example-Page-5/home.html">Landing Page</a>
-            <a href="http://127.0.0.1:5501/app.html">Watch App</a>
-        </div>
         <div class="content">
-            <p>This will be a watch app. Time, stopwatch, timer.</p>
-            <br><hr><br>
-            <span class="circle">
-                <p id="show">Time</p>
-            </span>
-            <br>
-            <button type="button" onclick="showTime()">Watch</button>
-            <br><br>
-            <hr><br>
-            <span class="circle">
-                <p id="stopwatch">Stop Watch</p>
-            </span>
-            <br>
-            <!--<button type="button" onclick="stopwatch()">Stopwatch</button>-->
-            <input type="button" id="b1" onclick="stopwatch()" value="Stopwatch" /> 
-            <input type="hidden" id="b2" onclick="startTime()" value="Start" /> 
-            <input type="hidden" id="b3" onclick="stopTime()" value="Stop" />
-            <input type="hidden" id="b4" onclick="resetTime()" value="Reset" />
-            <br><br>
-            <hr><br>
-            <span class="circle">
-                <p id="timer">Timer</p>
-            </span>
-            <br>
-            <button type="button" onclick="timer()">Timer</button>
-        </div>
-        <div class="home-footer">
-            <p>&copy; Oliver Qin 2020 | <a href="">Privacy Policy</a></p>
+            <div class="display">
+                <div class="watch-display">
+                    <span class="circle">
+                        <p id="show">Time</p>
+                        <div class="watch-inbutton">
+                            <input type="button" id="watch" onclick="showTime()" value="Watch" />
+                        </div>
+                    </span>
+                </div>
+                <div class="stopwatch-display">
+                    <span class="circle">
+                        <p id="stopwatch">Stop Watch</p>
+                        <div class="stopwatch-inbutton">
+                            <input type="button" id="b1" onclick="stopwatch()" value="Stopwatch" /> 
+                            <input type="hidden" id="b2" onclick="startTime()" value="Start" /> 
+                            <input type="hidden" id="b3" onclick="stopTime()" value="Stop" />
+                            <input type="hidden" id="b4" onclick="resetTime()" value="Reset" />
+                        </div>
+                    </span>
+                </div>
+                <div class="timer-display">
+                    <span class="circle">
+                        <p id="timer">Timer</p><br>
+                        <input type="hidden" size="5" id="b9" oninput="hrLimits()" min="0" max="23" value="0" placeholder="" /><p style="display: none; margin-left: -10px" id="hours"></p>
+                        <input type="hidden" size="5" id="b10" oninput="minLimits()" min="0" max="59" value="0" placeholder="" /><p style="display: none; margin-left: -10px" id="minutes"></p>
+                        <input type="hidden" size="5" id="b11" oninput="secLimits()" min="0" max="59" value="0" placeholder="" /><p style="display: none; margin-left: -10px" id="seconds"></p>
+                        <div class="timer-inbutton">
+                            <input type="button" id="b5" onclick="timer()" value="Timer" /> 
+                            <input type="hidden" id="b6" onclick="timerStart()" value="Start" /> 
+                            <input type="hidden" id="b7" onclick="timerStop()" value="Stop" />
+                            <input type="hidden" id="b8" onclick="timerReset()" value="Reset" />
+                        </div>
+                    </span>
+                </div>
+            </div>
         </div>
         <script src="app.js"></script>
     </body>

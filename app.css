@@ -3,13 +3,50 @@
 }
 
 body {
-    background-color: black;
-    height: 100%;
+    background-color: aquamarine;
 }
 
+.content {
+    background-color: aquamarine;
+    position: absolute;
+    left: 5vw;
+    padding: 1.5%;
+    width: 90vw;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Displays of each of the three interfaces for the watch */
+.watch-display {
+    display: inline-flex;
+    flex: 1 0 26%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+.stopwatch-display {
+    display: inline-flex;
+    position: relative;
+    flex: 1 0 26%;
+    margin-bottom: 1%;
+}
+
+.timer-display {
+    display: inline-flex;
+    flex: 1 0 26%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+/* Displays the interface of the circle */
 .circle {
-    height: 45vh;
-    width: 23vw;
+    height: 400px;
+    width: 400px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -17,73 +54,72 @@ body {
     text-align: center;
     vertical-align: middle;
     align-items: center;
+    border: 1px solid black;
 }
 
-.circle p {
+.circle #show {
     font-size: 300%;
 }
 
-.navBar {
-    background-color: cyan;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    padding: 1%;
-    z-index: 9999;
+.circle #stopwatch {
+    font-size: 300%;
 }
 
-.navBar a {
-    text-decoration: none;
-    color: crimson;
+.circle #timer {
+    font-size: 300%;
 }
 
-.navBar a:hover {
-    opacity: 0.8;
+/* Displays the interface of the buttons */
+.watch-inbutton {
+    position: absolute; 
+    margin-top: 20vh;
 }
 
-.content {
-    background-color: aquamarine;
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    top: 20vh;
-    left: 25%;
-    padding: 1%;
-    width: 50%;
-    font-family: 'Playfair Display', serif;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: auto;
-    overflow: auto;
+.stopwatch-inbutton {
+    position: absolute; 
+    margin-top: 20vh;
 }
 
-.home-footer {
-    background-color: cyan;
-    position: absolute;
-    bottom: auto;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1%;
+.timer-inbutton {
+    position: absolute; 
+    margin-top: 20vh;
 }
 
-.home-footer a {
-    text-decoration: none;
+/* Displays contingencies on the shrinking in the width of the window */
+@media (max-width: 1200px) {
+    .display {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .watch-display {
+        display: inline-flex;
+        flex: 1 0 40%;
+    }
+    .stopwatch-display {
+        display: inline-flex;
+        flex: 1 0 40%;
+    }
+    .timer-display {
+        display: inline-flex;
+        flex: 1 0 40%;
+    }
 }
 
-.footer {
-    background-color: cyan;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1%;
-}
-
-.footer a {
-    text-decoration: none;
+@media (max-width: 700px) {
+    .display {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .watch-display {
+        display: inline-flex;
+        flex: 1 0 51%;
+    }
+    .stopwatch-display {
+        display: inline-flex;
+        flex: 1 0 51%;
+    }
+    .timer-display {
+        display: inline-flex;
+        flex: 1 0 51%;
+    }
 }
